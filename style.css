@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+    grid-template-rows: 10vh 1fr;
+    grid-template-areas:
+        'h h'
+        'a m';
+}
+
+header {
+    grid-area: h;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ 
+
+.logo,
+.lang {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+ padding-right: 20px;
+}
+
+.logo p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2C384F;
+}
+
+.right {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+input {
+    width: 250px;
+    border-radius: 8px;
+    background-image: url(./img/search-normal.svg);
+    background-position-x: 95%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    padding: 10px 5%;
+    border: none;
+    background-color: rgba(218, 218, 218, 0.251);
+}
+
+select {
+    border: none;
+}
+
+aside {
+    grid-area: a;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+main {
+    grid-area: m;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1.3fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        'n n n n n n i i i e e e'
+        'p p p p p p p p a a a a'
+        't t t t t t t t a a a a';
+    gap: 30px;
+    padding: 30px;
+    background-color: #F8F9FB;
+    ;
+}
+
+/* main>div {
+    border: 1px solid black;
+} */
+
+.netWorth {
+    grid-area: n;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+}
+
+.income {
+    grid-area: i;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.expenses {
+    grid-area: e;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.portfolio {
+    grid-area: p;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.allAssets {
+    grid-area: a;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.transactions {
+    grid-area: t;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.income p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #899BBE;
+    margin-bottom: 5px;
+}
+
+.income h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #2C384F;
+    margin-bottom: 10px;
+}
+
+.income div div span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #20BF6B;
+}
+
+.income>div {
+    display: flex;
+}
+
+.income>div>div {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.aTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.aTitle h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.8194px;
+    line-height: 18px;
+    color: #2C384F;
+    margin-left: 20px;
+}
+
+.coin {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+    border-bottom: 1px dashed rgba(44, 56, 79, 0.3);
+    ;
+    margin-bottom: 20px;
+}
+
+.coinName {
+    display: flex;
+    align-items: center;
+}
+
+.coin>div+div>div {
+    display: flex;
+    align-items: center;
+}
+
+.coin>div+div {
+    text-align: end;
+}
+
+.coinName h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C384F;
+    margin-bottom: 6px;
+}
+
+.coinName p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #899BBE;
+}
+
+.coin>div+div>p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: #2C384F;
+    margin-bottom: 7px;
+}
+
+.coin>div+div>div p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: #20BF6B;
+    margin-left: 5px;
+}
+
+.coinName div {
+    margin-left: 15px;
+}
+
+.coin>div+div>div img {
+    width: 16px;
+}
+
+.allAssets button {
+    height: 38px;
+    padding: 15px 120px;
+    background: #724BF2;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+
+.expenses p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #899BBE;
+    margin-bottom: 5px;
+}
+
+.expenses h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #2C384F;
+    margin-bottom: 10px;
+}
+
+.expenses div div span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #EB3B5A;
+}
+
+.expenses>div {
+    display: flex;
+}
+
+.expenses>div>div {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.netWorth p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #899BBE;
+    margin-bottom: 5px;
+}
+
+.netWorth h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #2C384F;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.netWorth div div span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #20BF6B;
+}
+
+
+.leftN{
+    display: flex;
+    flex-direction: column;
+}
+
+.netWorth > div + div img{
+    margin: 30px;
+}
+
+.netWorth >div>div{
+    display: flex;
+    align-items: center;
+}
+
+.netWorth div>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.netWorth a{
+    display: flex;
+    border-radius: 12px;
+    background-color: #724BF2;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    color: white;
+}
+
+.portfolio div,
+.transactions div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+.portfolio div div,
+.transactions div div {
+    padding: 20px;
+    gap: 20px;
+}
+
+.portfolio button,
+.transactions button {
+    background: #EFEBFF;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+}
+
+.portfolio select,
+.transactions select {
+    border: none;
+    background-color: #EFEBFF;
+}
+
+.column div {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 80%;
+    margin-left: 18%;
+    margin-bottom: 30px;
+}
+
+.portfolio h1,
+.transactions h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2C384F;
+}
+
+.portfolio p,
+.transactions p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #899BBE;
+}
+
+.transactions div {
+    padding: 10px;
+}
+
+.transactions>div+div>h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #724BF2;
+    background: rgba(99, 52, 254, 0.12);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.transactions p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2C384F;
+}
+
+aside div {
+    display: flex;
+    align-items: center;
+}
+
+.EthereumA {
+    background: #784FFE;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+aside select {
+    border: none;
+    background-color: #784FFE;
+    color: white;
+}
+
+aside div div {
+    margin-top: 30px;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 8px;
+    color: #784FFE;
+    background: rgba(120, 79, 254, 0.12);
+    border-radius: 8px;
+}
+
+aside>div+div {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+aside>div img {
+    padding-right: 15px;
+}
+
+.logOut{
+    color: #EB3B5A;
+    margin-top: 600px;
+}
